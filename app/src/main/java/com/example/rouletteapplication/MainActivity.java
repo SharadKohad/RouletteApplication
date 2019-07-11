@@ -55,12 +55,10 @@ public class MainActivity extends AppCompatActivity
         if(networkInfo != null && networkInfo.isConnected()==true )
         {
             Toast.makeText(MainActivity.this, "Network Available", Toast.LENGTH_LONG).show();
-
         }
         else
         {
             Toast.makeText(MainActivity.this, "Network Not Available", Toast.LENGTH_LONG).show();
-
         }*/
     }
 
@@ -90,6 +88,10 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 signIn();
+                /*Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+                intent.putExtra("membercode","1544");
+                startActivity(intent);
+                finish();*/
             }
         });
     }
@@ -136,14 +138,9 @@ public class MainActivity extends AppCompatActivity
                     String msg = jsonObject.getString("msg");
                     if (status.equals("1"))
                     {
-                      /*  String username = jsonObject.getString("username");
-                        String email = ;
-                        String mobileNo = ;
-                        String Memb_Name = jsonObject.getString("Memb_Name");*/
-                      //  String userFile = ;
                         sessionManeger.createSession(jsonObject.getString("username"),jsonObject.getString("membercode"),jsonObject.getString("Email"),jsonObject.getString("Mobile_No"),jsonObject.getString("userFile"));
                         Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                        intent.putExtra("membercode",jsonObject.getString("membercode"));
+                      //  intent.putExtra("membercode",jsonObject.getString("membercode"));
                         startActivity(intent);
                         finish();
                     }
@@ -155,6 +152,7 @@ public class MainActivity extends AppCompatActivity
                 catch (JSONException e)
                 {
                     progressBar.setVisibility(View.GONE);
+                    btn_signin.setVisibility(View.VISIBLE);
                     btn_signin.setAlpha(1f);
                     e.printStackTrace();
                 }
@@ -165,6 +163,7 @@ public class MainActivity extends AppCompatActivity
             public void onErrorResponse(VolleyError error)
             {
                 progressBar.setVisibility(View.GONE);
+                btn_signin.setVisibility(View.VISIBLE);
                 btn_signin.setAlpha(1f);
                 VolleyLog.d("volley", "Error: " + error.getMessage());
                 error.printStackTrace();
@@ -188,4 +187,5 @@ public class MainActivity extends AppCompatActivity
         MySingalton.getInstance(getApplicationContext()).addRequestQueue(jsonObjRequest);
         jsonObjRequest.setRetryPolicy(new DefaultRetryPolicy(100000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
     }
+
 }

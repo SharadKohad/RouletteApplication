@@ -1,5 +1,4 @@
 package util;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,4 +12,8 @@ public class Constant
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
+
+    public static int TOTAL_BALANCE = 0;
+    public static int BOUNCE_CASH = 0;
+    public static int TOTAL_DEPOSIT_CASH = 0;
 }

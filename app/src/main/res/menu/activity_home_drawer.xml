@@ -10,12 +10,12 @@
             android:title="Profile" />
         <item
             android:id="@+id/nav_deposit"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/deposit"
             android:title="Deposit" />
         <item
             android:id="@+id/nav_withdrawl"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:icon="@drawable/withdraw"
+            android:title="Withdraw" />
         <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_menu_manage"

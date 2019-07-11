@@ -8,12 +8,11 @@
     tools:context=".SpashActivity"
     android:background="@drawable/background_greadle">
 
-
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/spash_icon"
-        android:padding="@dimen/_10sdp"/>
+        android:padding="@dimen/_10sdp" />
 
 
 </RelativeLayout>

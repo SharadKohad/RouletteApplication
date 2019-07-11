@@ -1,36 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DepositActivity">
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
 
-    <RelativeLayout
-        android:id="@+id/rl_contest_list"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        android:background="@drawable/background_greadle">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/spacing_mlarge"
+        android:paddingRight="@dimen/spacing_mlarge"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_back_arrow_deposit"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_arrow_white"
+                android:padding="@dimen/_12sdp"/>
 
         <ImageView
-            android:id="@+id/img_back_arrow_deposit"
-            android:layout_width="@dimen/_45sdp"
-            android:layout_height="@dimen/_45sdp"
-            android:src="@drawable/ic_arrow_white"
-            android:padding="@dimen/_10sdp"/>
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/casino_games" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tv_game_title"
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_toRightOf="@+id/img_back_arrow_deposit"
-            android:layout_centerVertical="true"
-            android:text="Deposit"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:textSize="@dimen/_15sdp"/>
+            android:layout_margin="@dimen/spacing_middle"
+            android:visibility="visible"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="5dp">
 
-    </RelativeLayout>
 
-</RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_mlarge"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/spacing_xlarge"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:text="DEPOSIT"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/textColorDark"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USD AMOUNT"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColor" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_usd_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:theme="@style/EditText.Grey" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CURRENT BTC RATE"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColor" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/current_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:theme="@style/EditText.Grey" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAYMENT MODE"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColor" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="BTC"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:theme="@style/EditText.Grey" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_mlarge" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt2"
+                        android:layout_toRightOf="@+id/checkboxspoinerId"
+                        android:layout_width="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Make a payment"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textColor"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <Button
+                    android:id="@+id/btn_payment_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:background="@drawable/btn_round_primary"
+                    android:text="GET ADDRESS FOR PAYMENT"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+
+                <com.eyalbira.loadingdots.LoadingDots
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/reloadingdots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:LoadingDots_auto_play="true"
+                    app:LoadingDots_dots_color="@color/textColor"
+                    app:LoadingDots_dots_count="4"
+                    app:LoadingDots_dots_size="@dimen/_10sdp"
+                    app:LoadingDots_dots_space="1dp"
+                    app:LoadingDots_loop_duration="800"
+                    app:LoadingDots_loop_start_delay="100"
+                    android:layout_gravity="center"
+                    app:LoadingDots_jump_duration="200"
+                    app:LoadingDots_jump_height="@dimen/_5sdp"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_large" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

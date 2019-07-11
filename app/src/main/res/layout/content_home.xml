@@ -16,7 +16,6 @@
 
 
         <ImageView
-            android:id="@+id/img_game"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_180sdp"
             android:scaleType="centerCrop"
@@ -33,6 +32,7 @@
             android:layout_height="180dp">
 
             <LinearLayout
+                android:id="@+id/ll_game"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clickable="true"
@@ -73,9 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
-
         <ImageView
-            android:id="@+id/img_game2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_180sdp"
             android:scaleType="centerCrop"
@@ -92,6 +90,7 @@
             android:layout_height="180dp">
 
             <LinearLayout
+                android:id="@+id/ll_deposit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clickable="true"
@@ -109,7 +108,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/btn_member_count2"
+                    android:id="@+id/btn_deposit"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/spacing_xlarge"
                     android:layout_marginTop="@dimen/spacing_small"
@@ -117,7 +116,6 @@
                     android:enabled="false"
                     android:paddingLeft="@dimen/spacing_xlarge"
                     android:paddingRight="@dimen/spacing_xlarge"
-                    android:text="21302"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
@@ -151,7 +149,7 @@
             android:layout_height="@dimen/_180sdp">
 
             <LinearLayout
-                android:id="@+id/lyt_parent"
+                android:id="@+id/ll_withdraw"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clickable="true"

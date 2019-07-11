@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,8 +15,9 @@ import android.webkit.WebView;
 public class PlayGameActivity extends AppCompatActivity
 {
     private WebView mywebview;
-    private String currentUrl = "http://preview.codecanyon.net/item/roulette-royale-html5-casino-game/full_screen_preview/17072843?_ga=2.250401350.1516701437.1561963316-465826215.1561186759";
+    private String currentUrl = "";
     private String memberCode;
+    //Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -23,13 +25,28 @@ public class PlayGameActivity extends AppCompatActivity
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_dash_board);
-        memberCode = getIntent().getStringExtra("membercode");
+        currentUrl = getIntent().getStringExtra("url");
+
         mywebview = (WebView)findViewById(R.id.webView1);
         mywebview  = new WebView(this);
         mywebview.getSettings().setJavaScriptEnabled(true); // enable javascript
         mywebview .loadUrl(currentUrl);
         setContentView(mywebview);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+       /* for (int i=0;i<20;i++)
+        {
+            handler=new Handler();
+            handler.postDelayed(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    Intent intent=new Intent(PlayGameActivity.this,PlayGameActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            },20000);
+        }*/
     }
     @Override
     public void onBackPressed() {

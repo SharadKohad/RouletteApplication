@@ -49,8 +49,7 @@ public class RegistrationActivity extends AppCompatActivity
         setContentView(R.layout.activity_registration);
         init();
     }
-    private void init()
-    {
+    private void init() {
         context = this;
         TV_SignIn = findViewById(R.id.tv_sign_In);
         TIET_user =(TextInputEditText)findViewById(R.id.et_user_name);
@@ -65,8 +64,7 @@ public class RegistrationActivity extends AppCompatActivity
         clickLisner();
     }
 
-    private void clickLisner()
-    {
+    private void clickLisner() {
         TV_SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,8 +98,7 @@ public class RegistrationActivity extends AppCompatActivity
         });
     }
 
-    public void signUp()
-    {
+    public void signUp() {
         String userName = TIET_user.getText().toString();
         if (userName.equals(""))
         {

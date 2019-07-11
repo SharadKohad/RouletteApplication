@@ -11,6 +11,15 @@
     <color name="textColorDark">#e07e1e</color>
     <color name="overlay_dark_30">#4D000000</color>
     <color name="grey_60">#999999</color>
+    <color name="green_400">#66BB6A</color>
+    <color name="blue_grey_800">#37474F</color>
+    <color name="grey_20">#cccccc</color>
+
+    <color name="grey_800">#424242</color>
+
+    <color name="grey_40">#999999</color>
+    <color name="green_900">#1B5E20</color>
+
 
 
 

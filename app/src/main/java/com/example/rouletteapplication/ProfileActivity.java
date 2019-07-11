@@ -11,6 +11,7 @@ import java.util.HashMap;
 
 import util.SessionManeger;
 
+@SuppressWarnings("ALL")
 public class ProfileActivity extends AppCompatActivity
 {
     SessionManeger sessionManeger;
@@ -46,4 +47,5 @@ public class ProfileActivity extends AppCompatActivity
             }
         });
     }
+
 }
