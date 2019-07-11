@@ -87,7 +87,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         clickable();
 
-       dashBoardData(membercode);
+        dashBoardData(membercode);
     }
 
     public void clickable() {
