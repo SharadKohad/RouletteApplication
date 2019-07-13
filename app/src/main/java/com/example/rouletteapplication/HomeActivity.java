@@ -1,8 +1,11 @@
 package com.example.rouletteapplication;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -53,7 +56,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     String membercode;
     TextView TV_UserName,TV_Email;
     LinearLayout gameplay,ImgDeposit,ImgWithdraw;
-    String numbber = "0.00007853";
     Button Btn_Diposit;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -88,6 +90,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         clickable();
 
         dashBoardData(membercode);
+
     }
 
     public void clickable() {
@@ -95,9 +98,24 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v)
             {
-                Intent intent=new Intent(HomeActivity.this, PlayGameActivity.class);
-                intent.putExtra("url","http://site0.bidbch.com/");
-                startActivity(intent);
+                ConnectivityManager mgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo netInfo = mgr.getActiveNetworkInfo();
+                if (netInfo != null)
+                {
+                    if (netInfo.isConnected())
+                    {
+                        Intent intent=new Intent(HomeActivity.this, PlayGameActivity.class);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),"Please check your internet connection",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Please check your internet connection",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -149,7 +167,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             Intent intent=new Intent(HomeActivity.this, WithdrawActivity.class);
             startActivity(intent);
         }
-        else if (id == R.id.nav_tools) {
+        else if (id == R.id.nav_about) {
 
         }
         else if (id == R.id.nav_share) {

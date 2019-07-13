@@ -87,11 +87,11 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                signIn();
-                /*Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                intent.putExtra("membercode","1544");
+               // signIn();
+                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+              //  intent.putExtra("membercode","1544");
                 startActivity(intent);
-                finish();*/
+                finish();
             }
         });
     }

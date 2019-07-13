@@ -54,7 +54,6 @@ public class DepositActivity extends AppCompatActivity
     private LoadingDots progressBar;
     String btc = "",membercode;
     SessionManeger sessionManeger;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -73,11 +72,9 @@ public class DepositActivity extends AppCompatActivity
         ET_Current_rate = findViewById(R.id.current_rate);
         progressBar =  findViewById(R.id.reloadingdots);
         ET_Usd_Amount = findViewById(R.id.et_usd_amount);
-
         clickLisner();
         getBTC_Current_Rate();
     }
-
     private void clickLisner() {
         Img_Back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +98,6 @@ public class DepositActivity extends AppCompatActivity
             }
         });
     }
-
     public void showBounceCash(final Context context) {
         dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
@@ -153,7 +149,6 @@ public class DepositActivity extends AppCompatActivity
         dialog.show();
         dialog.getWindow().setAttributes(lp);
     }
-
     public void getBTC_Current_Rate() {
         RequestQueue MyRequestQueue = Volley.newRequestQueue(getApplicationContext());
         String strurl = "https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=BTC";
@@ -199,7 +194,6 @@ public class DepositActivity extends AppCompatActivity
         jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(200000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         MyRequestQueue.add(jsonObjectRequest);
     }
-
     public void deposit(final String memberCode,final String usd_Amount,final String btc_type) {
         progressBar.setVisibility(View.VISIBLE);
         RequestQueue MyRequestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -256,7 +250,6 @@ public class DepositActivity extends AppCompatActivity
                 params.put("membercode",memberCode);
                 params.put("USD_Amount",usd_Amount);
                 params.put("BTC_Type", btc_type);
-
                 return params;
             }
         };

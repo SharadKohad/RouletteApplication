@@ -15,7 +15,7 @@ import android.webkit.WebView;
 public class PlayGameActivity extends AppCompatActivity
 {
     private WebView mywebview;
-    private String currentUrl = "";
+    private String currentUrl = "http://site0.bidbch.com/";
     private String memberCode;
     //Handler handler;
     @Override
@@ -25,7 +25,7 @@ public class PlayGameActivity extends AppCompatActivity
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_dash_board);
-        currentUrl = getIntent().getStringExtra("url");
+      //  currentUrl = getIntent().getStringExtra("url");
 
         mywebview = (WebView)findViewById(R.id.webView1);
         mywebview  = new WebView(this);

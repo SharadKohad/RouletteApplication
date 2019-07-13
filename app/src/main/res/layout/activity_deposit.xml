@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryDark">
-
+    android:background="@drawable/background_greadle">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +30,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:background="@drawable/casino_games" />
+            android:background="@drawable/deposit_image" />
+
         </RelativeLayout>
 
         <android.support.v7.widget.CardView
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="@dimen/spacing_mlarge"
-                android:background="@color/colorPrimary">
+                android:background="@drawable/background_greadle">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -176,7 +176,7 @@
                     android:background="@drawable/btn_round_primary"
                     android:text="GET ADDRESS FOR PAYMENT"
                     android:textAllCaps="false"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/textColor"
                     android:textStyle="bold" />
 
 

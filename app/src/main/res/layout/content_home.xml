@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_180sdp"
             android:scaleType="centerCrop"
-            android:src="@drawable/home_1" />
+            android:src="@drawable/new1" />
 
         <View
             android:layout_width="match_parent"
@@ -44,26 +44,27 @@
                     android:id="@+id/txtmember1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Game Play"
+                    android:text="QUICK WIN"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_40sdp"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_member_count1"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/spacing_xlarge"
-                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:background="@drawable/btn_rounded_white_outline"
                     android:enabled="false"
                     android:paddingLeft="@dimen/spacing_xlarge"
+                    android:text="Click Here"
                     android:paddingRight="@dimen/spacing_xlarge"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@color/textColor" />
 
             </LinearLayout>
 
         </com.balysv.materialripple.MaterialRippleLayout>
-
 
     </RelativeLayout>
 
@@ -77,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_180sdp"
             android:scaleType="centerCrop"
-            android:src="@drawable/home_2" />
+            android:src="@drawable/new2" />
 
         <View
             android:layout_width="match_parent"
@@ -102,21 +103,22 @@
                     android:id="@+id/txtmember2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Deposit"
+                    android:text="DEPOSIT"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_40sdp"                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_deposit"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/spacing_xlarge"
-                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:background="@drawable/btn_rounded_white_outline"
                     android:enabled="false"
+                    android:text="120"
                     android:paddingLeft="@dimen/spacing_xlarge"
                     android:paddingRight="@dimen/spacing_xlarge"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@color/textColor" />
 
             </LinearLayout>
 
@@ -136,7 +138,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/home_3" />
+            android:src="@drawable/new1" />
 
         <View
             android:layout_width="match_parent"
@@ -161,22 +163,22 @@
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Withdraw"
+                    android:text="WITHDRAW"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_40sdp"                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_member_count3"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/spacing_xlarge"
-                    android:layout_marginTop="@dimen/spacing_small"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:background="@drawable/btn_rounded_white_outline"
                     android:enabled="false"
                     android:paddingLeft="@dimen/spacing_xlarge"
                     android:paddingRight="@dimen/spacing_xlarge"
-                    android:text="213 Member"
-                    android:textColor="@android:color/white" />
+                    android:text="213"
+                    android:textColor="@color/textColor" />
 
             </LinearLayout>
 

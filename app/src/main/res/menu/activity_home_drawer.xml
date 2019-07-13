@@ -17,9 +17,9 @@
             android:icon="@drawable/withdraw"
             android:title="Withdraw" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_about"
             android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:title="About" />
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_menu_share"
